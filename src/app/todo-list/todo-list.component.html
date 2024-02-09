@@ -1,0 +1,50 @@
+<!-- The container for the heading of the task manager -->
+<div class="heading">
+    <h1>Task manager</h1>
+  </div>
+  
+  <div class="body">
+    <!-- Include the AddTaskComponent here -->
+    <!-- This is where you include the component responsible for adding tasks -->
+    <app-add-task (taskAdded)="onTaskAdded($event)"></app-add-task>
+  
+    <!-- Container for filtering tasks by priority -->
+    <div class="filter-container">
+      <!-- Label for the priority filter dropdown -->
+      <label for="priorityFilter" class="filter-label">Filter by Priority:</label>
+      <!-- Priority filter dropdown with ngModel for two-way data binding -->
+      <select [(ngModel)]="selectedPriority" id="priorityFilter" class="custom-input filter-select">
+        <option value="All">All</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+    </div>
+  
+    <!-- List of tasks -->
+    <ul class="task-list text-center">
+      <!-- Loop through each task and display its details -->
+      <li class="task-item" *ngFor="let task of filteredTasks; let i = index">
+        <!-- Container for displaying the task count -->
+        <div class="count-container">{{ i + 1 }}</div>
+        <!-- Container for task details -->
+        <div class="task-details text-center">
+          <!-- Display the task name -->
+          <div class="task-name">{{ task.name }}</div>
+          <!-- Display the task priority with dynamic styling -->
+          <div class="task-priority" [ngClass]="{'low-priority': task.priority === 'Low', 'medium-priority': task.priority === 'Medium', 'high-priority': task.priority === 'High'}">
+            Priority: {{ task.priority }}
+          </div>
+          <!-- Display the task due date if available -->
+          <div class="task-due-date" *ngIf="task.dueDate">Due Date: {{ task.dueDate | date }}</div>
+        </div>
+        <!-- Container for task action buttons -->
+        <div class="button-container">
+          <!-- Button to edit the task -->
+          <button (click)="editTask(task)" class="custom-button edit-button">Edit</button><br><br>
+          <!-- Button to delete the task -->
+          <button (click)="deleteTask(task)" class="custom-button delete-button">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>

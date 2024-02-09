@@ -1,0 +1,84 @@
+/* Style the form container */
+.add-task-form {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    margin-left: 0.9%;
+    margin-bottom: 20px; /* Add space between the form and the task list */
+  }
+  
+  /* Style the input fields and select */
+  .custom-input {
+    border-radius: 20px;
+    padding: 14px; /* Increase padding for larger input fields */
+    width: calc(100% - 10px); /* Set the width to 50% minus spacing */
+    margin-bottom: 10px; 
+    border: 4px solid #e0fae1;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.395);
+    box-sizing: border-box;
+    color:black;
+  }
+  
+  /* Style the select dropdown */
+  select {
+    border-radius: 20px;
+    padding: 14px; /* Increase padding for larger input fields */
+    width: calc(50% - 10px); /* Set the width to 50% minus spacing */
+    margin-right: 10px;
+    border: 4px solid #e0fae1;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.395);
+    box-sizing: border-box;
+  }
+  
+  
+  
+  /* Style the "Add Task" button */
+  .custom-add-button {
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #40B3A2;
+    min-width: calc(25% - 10px); /* Set the width to 25% minus spacing */
+    border: 3px solid #e0fae1;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .custom-add-button:hover {
+    border: 3px dotted #fff;
+  }
+  
+  .custom-add-button .animation {
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+  }
+  
+  @keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 10px; /* Add space between labels and inputs */
+    color:#e0fae1;
+    text-align: center;
+    justify-content:center;
+    margin-left:9%;
+  }

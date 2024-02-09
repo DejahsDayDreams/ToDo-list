@@ -1,0 +1,112 @@
+/* Style for the body of the page */
+.body {
+    padding: 3em;
+  }
+  
+  /* Style for the heading of the task manager */
+  .heading {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    color: #e0fae1;
+    margin: 0;
+  }
+  
+  /* Style for the count container */
+  .count-container {
+    background-color: #40B3A2;
+    color: white;
+    border-radius: 4px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 100%;
+  }
+  
+  /* Style for the task container */
+  .task_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    max-height: 40px;
+  }
+  
+  /* Style for the task list item */
+  li {
+    display: flex;
+    align-items: center;
+    background-color: #f0fff1;
+    padding: 10px;
+    border: 4px solid #40B3A2;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+    font-size: large;
+    color: #073b3a;
+  }
+  
+  /* Define CSS classes for priority levels */
+  .low-priority {
+    color: green; /* Change the color for low priority */
+  }
+  
+  .medium-priority {
+    color: orange; /* Change the color for medium priority */
+  }
+  
+  .high-priority {
+    color: red; /* Change the color for high priority */
+  }
+  
+  /* Style for the Edit and Delete buttons */
+  .custom-button {
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  
+  .edit-button {
+    background-color: #4f92da;
+  }
+  
+  .delete-button {
+    background-color: #ed421c;
+  }
+  
+  /* Style for the task name */
+  .task-name {
+    font-weight: bold;
+    font-size: 3em;
+  }
+  
+  /* Style for the filter container */
+  .filter-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    right: 0;
+  }
+  
+  /* Adjust the filter label and select styles as needed */
+  .filter-label {
+    font-weight: 200;
+    margin-right: 10px;
+    color: #f0fff1;
+  }
+  
+  .filter-select {
+    border: 2px solid #e0fae1;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    width: 150px; /* Adjust the width as needed */
+  }
