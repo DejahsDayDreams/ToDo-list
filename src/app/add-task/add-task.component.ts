@@ -1,5 +1,13 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
+
+// Define Task interface
+interface Task {
+  name: string;
+  priority: 'Low' | 'Medium' | 'High';
+  dueDate: Date | null;
+}
+
 @Component({
   selector: 'app-add-task',
   templateUrl: './add-task.component.html',
