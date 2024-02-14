@@ -1,3 +1,8 @@
+/* Style for the whole page */
+html, body {
+  background-color: #073b3a; /* Set the background color for the entire page */
+}
+
 /* Style for the body of the page */
 .body {
     padding: 3em;
