@@ -53,6 +53,7 @@
     text-transform: uppercase;
     overflow: hidden;
     cursor: pointer;
+    margin-top: 1%;
   }
   
   .custom-add-button:hover {
